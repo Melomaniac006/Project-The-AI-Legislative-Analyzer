@@ -1,4 +1,4 @@
-# ⚖️ VidhanAI — AI Legislative Analyzer
+# ⚖️ VAKEEL AI — AI Legislative Analyzer
 
 > Making Indian laws accessible to every citizen through token compression + LLM analysis.
 
