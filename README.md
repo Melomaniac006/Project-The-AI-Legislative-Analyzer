@@ -68,17 +68,7 @@ Option B — Use directly in any React setup by replacing App.jsx.
 - **Token savings** = (original_tokens - compressed_tokens)  
 - **CO₂ saved** = token_savings × 0.0003 / 1000 × 233
 
----
 
-## 🔑 API Keys Used
-
-- **Groq**: `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`
-- **ScaleDown**: `uQW0xPROjH7EERZfRx0FN9uerJEcKPmyae1xNpX2`
-- **ScaleDown Endpoint**: `https://api.scaledown.xyz/compress/raw/`
-
-> ⚠️ Move keys to a `.env` file before deploying to production.
-
----
 
 ## 📁 File Structure
 
