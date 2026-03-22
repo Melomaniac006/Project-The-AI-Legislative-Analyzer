@@ -238,7 +238,7 @@ export default function App() {
   return (
     <>
       <style>{STYLES}</style>
-      <div className="pinstripe" style={{ minHeight:"100vh", background:C.black }}>
+      <div className="pinstripe" style={{ minHeight:"100vh", width: "100vw",  background:C.black }}>
 
         {/* ════ HEADER ════ */}
         <header style={{
@@ -251,16 +251,16 @@ export default function App() {
               width:42, height:42, background:C.white,
               display:"flex", alignItems:"center", justifyContent:"center",
             }}>
-              <WigIcon size={30} invert />
+              <WigIcon size={40} invert />
             </div>
             <div>
               <div className="serif" style={{
-                fontSize:21, fontWeight:900, letterSpacing:3,
+                fontSize:28, fontWeight:900, letterSpacing:3,
                 textTransform:"uppercase", color:C.white, lineHeight:1,
               }}>
                 Vakeel<span style={{ color:C.silver, fontWeight:700 }}>AI</span>
               </div>
-              <div className="mono" style={{ fontSize:8, color:C.ash, letterSpacing:3.5, textTransform:"uppercase", marginTop:2 }}>
+              <div className="mono" style={{ fontSize:14, color:C.ash, letterSpacing:2, textTransform:"uppercase", marginTop:4 }}>
                 Citizen's Legislative Dashboard
               </div>
             </div>
@@ -288,27 +288,27 @@ export default function App() {
         </header>
 
         {/* ════ CONTENT ════ */}
-        <main style={{ maxWidth:1120, margin:"0 auto", padding:"52px 32px" }}>
+        <main style={{  width:"100%", padding:"40px 5vw" }}>
 
           {/* ── UPLOAD SCREEN ── */}
           {step === "upload" && (
-            <div className="fade-up" style={{ maxWidth:640, margin:"24px auto 0" }}>
+            <div className="fade-up" style={{ width:"100%", margin:"24px 0",minHeight:"85vh",alignItems:"center" }}>
 
               {/* Hero */}
               <div style={{ display:"flex", gap:0, marginBottom:52 }}>
                 <div style={{ width:3, background:C.white, marginRight:28, flexShrink:0 }}/>
                 <div>
-                  <div className="mono" style={{ fontSize:9, letterSpacing:4, color:C.ash, textTransform:"uppercase", marginBottom:12 }}>
+                  <div className="mono" style={{ fontSize:16, letterSpacing:4, color:C.ash, textTransform:"uppercase", marginBottom:12 }}>
                     Est. 2025 · Republic of India
                   </div>
                   <h1 className="serif" style={{
-                    fontSize:"clamp(38px,6vw,66px)", fontWeight:900,
+                    fontSize:"clamp(60px,9vw,120px)", fontWeight:900,
                     lineHeight:1.05, color:C.white, marginBottom:16,
                   }}>
                     Justice,<br/>
                     <em style={{ color:C.silver }}>Simplified.</em>
                   </h1>
-                  <p style={{ fontSize:17, color:C.pearl, lineHeight:1.85, fontStyle:"italic" }}>
+                  <p style={{ fontSize:"clamp(20px, 1.8vw, 28px)", color:C.pearl, lineHeight:1.85, fontStyle:"italic" }}>
                     Upload any Indian bill, act, or policy.<br/>
                     We compress it intelligently — then break it down<br/>for every citizen.
                   </p>
@@ -330,11 +330,11 @@ export default function App() {
                   position:"relative",
                 }}
               >
-                <div style={{ fontSize:40, marginBottom:14 }}>⚖</div>
-                <div className="serif" style={{ fontSize:22, fontWeight:700, color:C.white, marginBottom:8 }}>
+                <div style={{ fontSize:60, marginBottom:14 }}>⚖</div>
+                <div className="serif" style={{ fontSize:32, fontWeight:700, color:C.white, marginBottom:8 }}>
                   Place your document here
                 </div>
-                <div className="mono" style={{ fontSize:10, color:C.ash, letterSpacing:2.5 }}>
+                <div className="mono" style={{ fontSize:14, color:C.ash, letterSpacing:2.5 }}>
                   PDF · TXT · ANY SIZE
                 </div>
                 <input ref={fileRef} type="file" accept=".pdf,.txt" style={{ display:"none" }}
@@ -361,8 +361,8 @@ export default function App() {
                     flex:1, padding:"18px 16px", textAlign:"center",
                     borderRight: i<2 ? `1px solid ${C.steel}` : "none",
                   }}>
-                    <div style={{ fontSize:20, marginBottom:6, color:C.white }}>{icon}</div>
-                    <div className="serif" style={{ fontSize:14, color:C.white, fontWeight:700, marginBottom:3 }}>{title}</div>
+                    <div style={{ fontSize:32, marginBottom:10, color:C.white }}>{icon}</div>
+                    <div className="serif" style={{ fontSize:"clamp(18px, 1.5vw, 24px)", color:C.white, fontWeight:800, marginBottom:6 }}>{title}</div>
                     <div className="mono" style={{ fontSize:8, color:C.ash, letterSpacing:1.5 }}>{sub}</div>
                   </div>
                 ))}
