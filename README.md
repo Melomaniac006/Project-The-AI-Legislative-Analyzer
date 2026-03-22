@@ -79,6 +79,10 @@ React Dashboard → summary, clauses, impact, Q&A
 
 
 
+
+https://github.com/user-attachments/assets/c684a798-b985-446a-9f75-cf51290f950d
+
+
 ---
 
 ## ⚙️ Technology Stack
