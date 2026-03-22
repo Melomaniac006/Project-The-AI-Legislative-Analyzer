@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from dotenv import load_dotenv
 import httpx
 import os
 import re
@@ -8,6 +9,8 @@ import json
 import pdfplumber
 import io
 from groq import Groq
+
+load_dotenv()
 
 app = FastAPI(title="AI Legislative Analyzer")
 
@@ -17,11 +20,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-GROQ_API_KEY = "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"
-SCALEDOWN_API_KEY = "uQW0xPROjH7EERZfRx0FN9uerJEcKPmyae1xNpX2"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+SCALEDOWN_API_KEY = os.getenv("SCALEDOWN_API_KEY")
 SCALEDOWN_ENDPOINT = "https://api.scaledown.xyz/compress/raw/"
 GROQ_MODEL = "llama-3.3-70b-versatile"
+if not GROQ_API_KEY:
+    raise RuntimeError("GROQ_API_KEY is not set. Please add it to your .env file.")
+
+if not SCALEDOWN_API_KEY:
+    raise RuntimeError("SCALEDOWN_API_KEY is not set. Please add it to your .env file.")
 
 groq_client = Groq(api_key=GROQ_API_KEY)
 

@@ -1,0 +1,3 @@
+# Environment variables (API keys, secrets)
+.env
+.env.*
