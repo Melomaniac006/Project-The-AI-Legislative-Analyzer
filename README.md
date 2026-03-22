@@ -240,8 +240,14 @@ vakeel-ai/
 - 📅 Timeline of legislative changes
 - 📣 Public sentiment analysis
 - 📱 Mobile app (iOS & Android)
+  
 
 ---
+
+## 👥 Team Behind VAKEEL AI
+- Sayan Chowdhury
+- Sanjit Kumar Shaw
+- Sukanya Rana
 
 <div align="center">
 
